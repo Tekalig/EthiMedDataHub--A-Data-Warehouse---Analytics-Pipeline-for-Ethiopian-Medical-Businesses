@@ -49,8 +49,14 @@ async def scrape_channel(channel):
     except Exception as e:
         print(f"Error scraping {channel}: {e}")
 
+
+
 async def main():
     await client.start(PHONE_NUMBER)
     for channel in CHANNELS:
         await scrape_channel(channel)
     await client.disconnect()
+
+if __name__ == '__main__':
+    import asyncio
+    asyncio.run(main())

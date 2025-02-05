@@ -1,7 +1,11 @@
 from telethon import TelegramClient
 import os
+from dotenv import load_dotenv
 
-# Telegram API credentials (reuse from the main scraper)
+# Load environmental variables
+load_dotenv()
+
+# Telegram API credentials (reuse from the main scraper) from the .env file
 API_ID = os.getenv('TELEGRAM_API_ID')
 API_HASH = os.getenv('TELEGRAM_API_HASH')
 PHONE_NUMBER = os.getenv('TELEGRAM_PHONE_NUMBER')
