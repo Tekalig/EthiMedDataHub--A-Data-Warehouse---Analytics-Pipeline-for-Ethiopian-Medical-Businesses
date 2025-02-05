@@ -1,8 +1,12 @@
 from telethon import TelegramClient
 import os
 import json
+from dotenv import load_dotenv
 
-# Telegram API credentials (replace with actual API ID and Hash)
+# load environmental variable
+load_dotenv()
+
+# Telegram API credentials (replace with actual API ID and Hash) from the .env file
 API_ID = os.getenv('TELEGRAM_API_ID')
 API_HASH = os.getenv('TELEGRAM_API_HASH')
 PHONE_NUMBER = os.getenv('TELEGRAM_PHONE_NUMBER')
